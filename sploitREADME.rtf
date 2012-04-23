@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red17\green85\blue204;}
+\vieww12240\viewh14740\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl276\slmult1
+
+\f0\fs22 \cf0 Author:			Mika Ayenson
+\f1 \
+
+\f0 Date:				4-19-2012\
+Module ID:			sploit\
+Project ID: 			Vulnerability assessment within the cloud\
+Programming Language:	python 2.6, bash	\
+OS/Hardware dependencies:	Linux Distribution. A few programs must be installed.  It\'92s best to \
+\pard\pardeftab720\li2160\fi720\ri0\sl276\slmult1
+\cf0 install backtrack 5 r2 that has metasploit already configured.\
+\pard\pardeftab720\ri0\sl276\slmult1
+\cf0 \
+Problem Description:		This module was created to test exploits on various machines. It can \
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+\cf0 be run as a standalone program, however it was meant to run as a module to the cvaframe framework.  This program will open sessions to a system and then exit it.  If you are running this module, it must be run against only machines you own for legal reasons.    \
+\pard\pardeftab720\ri0\sl276\slmult1
+\cf0 \
+Installation:			Not installation is necessary. Just run the script with python\
+\
+Overall Design:		It can run as a standalone program, or as a module to cvaframe. See \
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+\cf0 the cvaframe README for more details.  If this is run alone, you simply have to pass it a target ip address as an arguement to this script.  \
+\pard\pardeftab720\ri0\sl276\slmult1
+\cf0 \
+Program Assumptions \
+      and Restrictions:		You must have inlcuded two plugins.  The db_autopwn plugin and the \
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+\cf0 pentest plugin and place these into the directory \{/opt/metasploit/msf3/plugins\}.  You can find them at:\
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "https://github.com/neinwechter/metasploit-framework/blob/autopwn-modules/plugins/db_autopwn.rb"}}{\fldrslt \cf2 \ul \ulc2 https://github.com/neinwechter/metasploit-framework/blob/autopwn-modules/plugins/db_autopwn.rb}}\cf2 \ul \ulc2 \
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+\cf0 \ulnone and \
+\pard\pardeftab720\li2880\ri0\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "https://github.com/darkoperator/Metasploit-Plugins"}}{\fldrslt \cf2 \ul \ulc2 https://github.com/darkoperator/Metasploit-Plugins}}\cf2 \ul \ulc2 \
+\pard\pardeftab720\ri0\sl276\slmult1
+\cf0 \ulnone \
+Interfaces:			This is a command line tool. You must run this from a terminal.\
+\
+Usage				python sploit.py [args]\{target\} outfile \
+			\
+Arguments			-v, --verbose : Displays all output \
+				-h, --help :       Displays the help menu     \
+				target : 	            target in cider format, or localhost 		\
+				outfile :           The outfile where you want the output to flood to.\
+\
+\
+Program Source:		sploit.py\
+Additional Files:		db_autopwn, pentest\
+\
+Known Bugs :  		please e-mail any known bugs to rdaemon5@gmail.com		\
+\
+References:			This framework relies heavily on its dependencies, namely Metasploit \
+and OpenVAS\
+\
+Disclaimer		If you use this framework for malicious acts, you and only you will be \
+\pard\pardeftab720\li1440\fi720\ri0\sl276\slmult1
+\cf0 responsible. So be smart, and use it wisely =)\
+\pard\pardeftab720\ri0\sl276\slmult1
+\cf0 \
+}
